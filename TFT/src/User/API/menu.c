@@ -760,7 +760,7 @@ GUI_POINT getIconStartPoint(int index)
       }
       touchSound = true;
 
-      if (curMenuItems->items[tempKey].label.index == LABEL_BACK)  // check if Back button is held
+      if (tempKey != KEY_IDLE && curMenuItems->items[tempKey].label.index == LABEL_BACK)  // check if Back button is held
       {
         BUZZER_PLAY(sound_ok);
         backHeld = true;
